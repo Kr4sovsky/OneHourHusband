@@ -17,7 +17,6 @@ function App() {
 	  v.mattanelli@seznam.cz</a>
         >
            OneHourHusband.ie
-        </a>
       </header>
     </div>
   );
