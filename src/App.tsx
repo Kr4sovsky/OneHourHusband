@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={front} className="App-logo" alt="front" />
-        <img src={back} className="App-logo" alt="back" /
+        <img src={back} className="App-logo" alt="back" />
 	<p>
 	  One Hour Husband website is coming soon
         </p>
