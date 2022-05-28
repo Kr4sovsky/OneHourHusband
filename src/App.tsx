@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import front from './front.svg';
+import back from './back.svg'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <img src={front} className="App-logo" alt="front" />
+        <img src={back} className="App-logo" alt="back" /
+	<p>
 	  One Hour Husband website is coming soon
         </p>
         <p>
@@ -16,7 +18,8 @@ function App() {
           className="App-link" >
 	  v.mattanelli@seznam.cz</a>
         >
-           OneHourHusband.ie
+
+          <p>OneHourHusband.ie</p>
       </header>
     </div>
   );
