@@ -22,6 +22,9 @@ function App() {
           href = "mailto: vlad@onehourhusband.ie" >
 	  vlad@onehourhusband.ie</a>
 	</p>
+	<p><a href="tel:+353877778875">087 777 8875</a></p>
+	<p> Working Hours </p>
+	<p> Mon-Fri 9-18 </p>
       </header>
     </div>
   );
