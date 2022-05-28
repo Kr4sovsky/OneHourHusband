@@ -8,15 +8,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+	  One Hour Husband website is coming soon
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p>
+	  For queries contact:
+	<a
+          className="App-link" >
+	  v.mattanelli@seznam.cz</a>
         >
-          Learn React
+           OneHourHusband.ie
         </a>
       </header>
     </div>
