@@ -10,7 +10,7 @@ function App() {
 	<br/>
 	<p>
 	  Website is coming soon
-        </p
+        </p>
           <p><a className="App-link">OneHourHusband.ie</a></p>
         <p>
 	  For queries contact:
