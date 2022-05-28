@@ -10,13 +10,14 @@ function App() {
 	<br/>
 	<p>
 	  Website is coming soon
-        </p>
-	<br/>
-          <p><a>OneHourHusband.ie</a></p>
+        </p
+          <p><a className="App-link">OneHourHusband.ie</a></p>
         <p>
 	  For queries contact:
-	<br/>
+	</p>
+	<p>
 	<a
+	  className="App-link"
           href = "mailto: v.mattanelli@seznam.cz" >
 	  v.mattanelli@seznam.cz</a>
 	</p>
