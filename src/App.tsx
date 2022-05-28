@@ -17,8 +17,6 @@ function App() {
 	<a
           className="App-link" >
 	  v.mattanelli@seznam.cz</a>
-        >
-
           <p>OneHourHusband.ie</p>
       </header>
     </div>
