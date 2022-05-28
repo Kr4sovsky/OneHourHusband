@@ -6,17 +6,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={vlad} className="App-logo" alt="front" />
+        <img src={vlad} alt="front" />
+	<br/>
 	<p>
-	  One Hour Husband website is coming soon
+	  Website is coming soon
         </p>
+	<br/>
+          <p><a>OneHourHusband.ie</a></p>
         <p>
 	  For queries contact:
+	<br/>
 	<a
-          className="App-link" >
+          href = "mailto: v.mattanelli@seznam.cz" >
 	  v.mattanelli@seznam.cz</a>
 	</p>
-          <p>OneHourHusband.ie</p>
       </header>
     </div>
   );
