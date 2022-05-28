@@ -1,6 +1,5 @@
 import React from 'react';
-import front from './front.svg';
-import back from './back.svg'
+import vlad from './vlad.jpg';
 import './App.css';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={front} className="App-logo" alt="front" />
-        <img src={back} className="App-logo" alt="back" />
 	<p>
 	  One Hour Husband website is coming soon
         </p>
