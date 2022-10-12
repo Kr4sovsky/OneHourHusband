@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <p><a className="App-link">OneHourHusband.ie</a></p>
 	<p>
 	  Website is coming soon
         </p>
-        <p><a className="App-link">OneHourHusband.ie</a></p>
  
         <img className="App-logo" src={vlad} alt="front" />
 	<br/>
@@ -19,9 +19,12 @@ function App() {
 	<p>
 	<a
 	  className="App-link"
-          href = "mailto: v.mattanelli@seznam.cz" >
-	  v.mattanelli@seznam.cz</a>
+          href = "mailto: vlad@onehourhusband.ie" >
+	  vlad@onehourhusband.ie</a>
 	</p>
+	<p><a className="App-link" href="tel:+353877778875">087 777 8875</a></p>
+	<p> Working Hours </p>
+	<p> Mon-Fri 9-18 </p>
       </header>
     </div>
   );
