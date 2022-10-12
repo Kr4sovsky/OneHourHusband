@@ -6,13 +6,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img className="App-logo" src={vlad} alt="front" />
-	<br/>
 	<p>
 	  Website is coming soon
         </p>
-          <p><a className="App-link">OneHourHusband.ie</a></p>
-        <p>
+        <p><a className="App-link">OneHourHusband.ie</a></p>
+ 
+        <img className="App-logo" src={vlad} alt="front" />
+	<br/>
+       <p>
 	  For queries contact:
 	</p>
 	<p>
