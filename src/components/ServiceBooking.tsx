@@ -424,15 +424,15 @@ const ServiceBooking = () => {
             {activeStep === 3 ?
             <Typography sx={{fontSize: { sm: 13, md: 17, lg: 21, xl: 25}}} variant="h5">{"All set! Thank you for using our service!"}</Typography> : null}
             <br></br>
-            <br></br>
+            {/* <br></br> */}
             <Typography variant="subtitle2">{
               activeStep === 0 ? "Please select a type of service you require" :
               activeStep === 1 ? "Please select provisional date and time to be confirmed" :
               activeStep === 2 ? "Please fill in contact form details and upload relevant photos" :
-              activeStep === 3 ? "We will be in touch about your booking to confirm or reschedule the date within the 24 hours or by the end of the next business day."
+              activeStep === 3 ? "We will be in touch about your booking to confirm or reschedule the date within 24 hours or by the end of the next business day."
               :
                null}</Typography>
-               <br></br>
+               {activeStep === 3 ? <br></br> : null}
                {activeStep === 3 ?
             <Typography variant="subtitle2">{"Make sure to periodically check the email you have provided for further communication." }</Typography> : null}
             {/* <Box sx={{ flexGrow: 1 }}> */}
