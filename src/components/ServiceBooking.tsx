@@ -1,7 +1,8 @@
 import { Box, Card, CardActionArea, CardMedia, createTheme, Grid, Paper, Stepper, ThemeProvider, Typography } from "@mui/material";
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import { Link } from "react-router-dom";
 import logo from '../assets/landing_image.png'
+import success from '../assets/success.png'
 import tiling from '../assets/tiling.png'
 import flooring from '../assets/flooring.png'
 import plumbing from '../assets/plumbing.png'
@@ -379,38 +380,68 @@ const ServiceBooking = () => {
             stepProps.completed = false;
           }
           return (
-            <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+            <Step key={label} {...stepProps} >
+              <StepLabel StepIconProps={{
+                sx: {
+                  root: {
+                  "&:Mui-completed": {
+                    color: "green"
+                  },
+                  "&:Mui-active": {
+                    color: "blue"
+                  },
+                },
+                },
+              // text:   classes.text,
+
+    }} sx={{color: "orange"}} {...labelProps}>{label}</StepLabel>
             </Step>
           );
         })}
       </Stepper>
       {activeStep === steps.length ? (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
+          {/* <Typography sx={{ mt: 2, mb: 1 }}>
             All steps completed - you&apos;re finished
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+          </Typography> */}
+          {/* <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
             <Button onClick={handleReset}>Reset</Button>
-          </Box>
+          </Box> */}
         </React.Fragment>
       ) : null}
       <br></br>
     </Box>
-        <Grid sx={{width: "50%"}} item >
-            <Typography sx={{fontSize: { sm: 13, md: 17, lg: 21, xl: 25}}} variant="h5">Make Your booking with us today!</Typography>
+        <Grid sx={{width: "50%", paddingTop: 2}} item >
+          <Grid container alignItems="center">
+            <Grid item>
+            <Typography sx={{fontSize: { sm: 13, md: 17, lg: 21, xl: 25}}} variant="h5">{activeStep === 3 ? "Booking Successful!" : "Make Your booking with us today!"}</Typography>
+            </Grid>
+            <Grid item sx={{display: activeStep !== 3 ? 'none' : null}}>
+            <Box component={"img"}  onDragStart={(e: SyntheticEvent<Element, Event>) => {e.preventDefault();}} sx={{width: {md: '100px'}}} src={success} alt="success" />
+            </Grid>
+            </Grid>
+            {activeStep === 3 ?
+            <Typography sx={{fontSize: { sm: 13, md: 17, lg: 21, xl: 25}}} variant="h5">{"All set! Thank you for using our service!"}</Typography> : null}
             <br></br>
-            <Typography variant="caption">{
+            <br></br>
+            <Typography variant="subtitle2">{
               activeStep === 0 ? "Please select a type of service you require" :
               activeStep === 1 ? "Please select provisional date and time to be confirmed" :
-              activeStep === 2 ? "Please fill in contact form details and upload relevant photos" : null}</Typography>
+              activeStep === 2 ? "Please fill in contact form details and upload relevant photos" :
+              activeStep === 3 ? "We will be in touch about your booking to confirm or reschedule the date within the 24 hours or by the end of the next business day."
+              :
+               null}</Typography>
+               <br></br>
+               {activeStep === 3 ?
+            <Typography variant="subtitle2">{"Make sure to periodically check the email you have provided for further communication." }</Typography> : null}
             {/* <Box sx={{ flexGrow: 1 }}> */}
 
           {activeStep === 0 ? stepOne : activeStep === 1 ? stepTwo : activeStep === 2 ? stepThree : null}
 
-
+          {activeStep === 3 ? null :
           <Grid justifyContent="center" container>
+
           <Button size="small"  sx={{width:"80%"}} variant="contained" onClick={handleNext} disabled={!selectedJobType}>
               {activeStep === steps.length - 1 ? 'Finish' : 'CLICK TO CONTINUE'}
             </Button>
@@ -422,6 +453,7 @@ const ServiceBooking = () => {
               {activeStep === steps.length - 1 ? 'CANCEL' : 'CANCEL'}
             </Button>
             </Grid>
+}
           {/* </Box> */}
         </Grid>
 
