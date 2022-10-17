@@ -13,9 +13,9 @@ const NavBar = () => {
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
           if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-            setShow(false);
+            // setShow(false);
           } else { // if scroll up show the navbar
-            setShow(true);
+            // setShow(true);
           }
 
           // remember current page location to use in the next move
@@ -60,7 +60,7 @@ const NavBar = () => {
           let element = document.getElementById(id)
           event.preventDefault()
           if (element) {
-            element.scrollIntoView()
+            element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
           }
       }
 

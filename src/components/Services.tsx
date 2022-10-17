@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import React, { useMemo } from "react";
+import React, { SyntheticEvent, useMemo } from "react";
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -85,6 +85,7 @@ const Services = () => {
           component="img"
           alt="green iguana"
           height="200"
+          onDragStart={(e: SyntheticEvent<Element, Event>) => {e.preventDefault()}}
           image={service.ima}
         />
         <CardContent>

@@ -198,6 +198,7 @@ const ServiceBooking = () => {
                   width: {xs: '50%'},
                   // textColor: 'orange',
                 }}
+                onDragStart={(e: SyntheticEvent<Element, Event>) => {e.preventDefault();}}
                 component="img"
                 // className={classes.media}
                 alt="green iguana"
@@ -466,7 +467,7 @@ const ServiceBooking = () => {
                 display: {xs: "none", sm: "none", md: "block"},
                 zIndex: -1
             }}>
-          <img src={logo} width={"110%"} alt="logo" />
+          <CardMedia component={"img"} onDragStart={(e: SyntheticEvent<Element, Event>) => {e.preventDefault();}} src={logo} width={"110%"} alt="logo" />
         </Grid>
 
     </Grid>
