@@ -7,28 +7,49 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import React from "react";
 import NavBar from "../components/NavBar";
+import Reviews from "../components/Reviews";
 
 const Main = () => {
 
 
     return <Grid>
         <NavBar/>
-            <Grid container>
-                <Grid item>
+            <Grid sx={{marginTop: "100px"}} container direction="column">
+                <Grid item id="book-a-service">
                     <ServiceBooking/>
                 </Grid>
-                <Grid item>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Grid item id="services">
                     <Services/>
                 </Grid>
-                <Grid item>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Grid item id="gallery">
                     <Gallery/>
                 </Grid>
-                <Grid item>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Grid item id="reviews">
+                    <Reviews/>
+                </Grid>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Grid item id="about">
                     <About/>
                 </Grid>
-                <Grid item>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Grid item id="contact">
                     <Contact/>
                 </Grid>
+                <br></br>
+
             </Grid>
     </Grid>
 }

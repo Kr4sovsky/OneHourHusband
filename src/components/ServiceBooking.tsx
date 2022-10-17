@@ -359,9 +359,11 @@ const ServiceBooking = () => {
 
     return <Grid container sx={{
           paddingTop: {xs: 2, sm: 0, md: 0},
-          paddingLeft: {xs: 0, sm: 1, md: 2},
+          // paddingLeft: {xs: 0, sm: 1, md: 2},
+          paddingLeft: {xs: 5, sm: 10, md: 15},
+          paddingRight: {xs: 5, sm: 10, md: 15}
           // marginLeft: 10, marginRight: 10, marginBottom: 5, marginTop: 5
-        }} justifyContent="center"  direction="row">
+        }} justifyContent="space-between" alignItems="center"  direction="row">
                   <Box sx={{ width: '100%' }}>
           <br></br>
           {/* <br></br> */}
