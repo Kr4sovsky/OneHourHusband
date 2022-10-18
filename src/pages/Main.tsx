@@ -41,7 +41,7 @@ const Main = () => {
                 <br></br>
                 <br></br>
                 <Grid item id="about">
-                    <About/>
+                    <About />
                 </Grid>
                 <br></br>
                 <br></br>

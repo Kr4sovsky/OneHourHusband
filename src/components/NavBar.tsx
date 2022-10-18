@@ -123,7 +123,7 @@ const NavBar = () => {
             >
                 <Tab onClick={(e) => {navToSection(e, "book-a-service")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="BOOK A SERVICE"></Tab>
                 <Tab onClick={(e) => {navToSection(e, "services")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="SERVICES" />
-                <Tab onClick={(e) => {navToSection(e, "about")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="GALLERY" />
+                <Tab onClick={(e) => {navToSection(e, "gallery")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="GALLERY" />
                 <Tab onClick={(e) => {navToSection(e, "reviews")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="REVIEWS" />
                 <Tab onClick={(e) => {navToSection(e, "about")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="ABOUT" />
                 <Tab onClick={(e) => {navToSection(e, "contact")}} sx={{fontSize: {xs: 12, md: 12, lg: 14, xl: 20 }}} iconPosition="start" label="CONTACT" />

@@ -1,5 +1,5 @@
-import { Chip, Grid, TextField, Typography } from "@mui/material";
-import React, { useMemo } from "react";
+import { Button, Chip, Grid, TextField, Typography } from "@mui/material";
+import React, { SyntheticEvent, useMemo, useState } from "react";
 
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
@@ -20,25 +20,43 @@ import CallIcon from '@mui/icons-material/Call';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { MuiTelInput } from "mui-tel-input";
 const Contact = () => {
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [description, setDescription] = useState('')
 
+  const handleClear = () => {
+    setDescription('')
+    setEmail('')
+    setFullName('')
+    setSubject('')
+  }
   const stepThree = useMemo(() => {
     return <Grid >
       <br></br>
 
       <Grid container spacing={1.5} justifyContent={"space-between"} sx={{paddingBottom: 2}} >
       <Grid item width={"50%"}>
-      <TextField fullWidth size="medium" label="Full Name"></TextField>
+      <TextField value={fullName}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)}
+      fullWidth size="medium" label="Full Name"></TextField>
       </Grid>
       <Grid item width={"50%"}>
-      <TextField fullWidth label="Email" required ></TextField>
+      <TextField value={email}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+       fullWidth label="Email" required ></TextField>
       </Grid>
       </Grid>
       <Grid container direction="column" spacing={3}>
       <Grid item>
-      <TextField label="Subject" multiline={true} maxRows={5} required sx={{width: "100%"}}></TextField>
+      <TextField value={subject}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSubject(e.target.value)}
+       label="Subject" multiline={true} maxRows={5} required sx={{width: "100%"}}></TextField>
       </Grid>
-      <Grid item>
-      <TextField label="Description" multiline={true} maxRows={5} required sx={{width: "100%"}}></TextField>
+      <Grid item width={"100vh"}>
+      <TextField value={description}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)}
+        label="Description" multiline={true} maxRows={5} required sx={{width: "100%"}}></TextField>
       </Grid>
       {/* <Button
         variant="contained"
@@ -52,13 +70,21 @@ const Contact = () => {
             // hidden
           />
         </Grid>
+        <Grid item>
+        <Button size="small" variant="contained" disabled={!email || !description || !subject}>
+              {'SEND EMAIL'}
+            </Button>
+            <Button onClick={handleClear} size="small" variant="text">
+              {'CLEAR'}
+            </Button>
+            </Grid>
         </Grid>
       {/* </Button> */}
       <br></br>
       <br></br>
 
     </Grid>
-  }, [])
+  }, [description, email, fullName, subject])
 
 const ContactCard = useMemo(() => {
 
