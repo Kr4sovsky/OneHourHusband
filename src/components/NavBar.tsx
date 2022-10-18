@@ -60,7 +60,7 @@ const NavBar = () => {
           let element = document.getElementById(id)
           event.preventDefault()
           if (element) {
-            element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+            element.scrollIntoView({behavior: "smooth", block: "start"})
           }
       }
 

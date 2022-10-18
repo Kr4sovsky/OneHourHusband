@@ -14,7 +14,7 @@ const Main = () => {
 
     return <Grid>
         <NavBar/>
-            <Grid sx={{marginTop: "100px"}} container direction="column">
+            <Grid sx={{marginTop: "100px"}} direction="column">
                 <Grid item id="book-a-service">
                     <ServiceBooking/>
                 </Grid>
@@ -24,10 +24,11 @@ const Main = () => {
                 <Grid item id="services">
                     <Services/>
                 </Grid>
-                <br></br>
-                <br></br>
-                <br></br>
+
                 <Grid item id="gallery">
+                <br></br>
+                <br></br>
+                <br></br>
                     <Gallery/>
                 </Grid>
                 <br></br>
