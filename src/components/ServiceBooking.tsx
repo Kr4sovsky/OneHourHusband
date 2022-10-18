@@ -317,7 +317,7 @@ const ServiceBooking = () => {
         <br></br>
         <Grid container spacing={1.5} justifyContent={"space-between"} sx={{paddingBottom: 2}} >
         <Grid item width={"50%"}>
-        <TextField fullWidth size="medium" label="Full Name"></TextField>
+        <TextField fullWidth size="medium" required label="Full Name"></TextField>
         </Grid>
         <Grid item width={"50%"}>
         <TextField fullWidth label="Email" required ></TextField>
@@ -330,7 +330,9 @@ const ServiceBooking = () => {
         </Grid>
         <Grid item>
         <MuiTelInput
+        required
         value={mobileValue}
+        label={"Mobile Phone"}
         onChange={handleMobileChange}
         continents={continents}
         sx={{width: "50%"}}
